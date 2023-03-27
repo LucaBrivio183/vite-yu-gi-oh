@@ -1,12 +1,19 @@
 <script>
+import AppLogo from './AppLogo.vue';
 export default {
-    name: 'Header'
+    name: 'Header',
+    components: {
+        AppLogo
+    },
 }
 </script>
 
 <template>
-    <header>
-
+    <header class="py-2">
+        <div class="d-flex align-items-center">
+            <AppLogo />
+            <h1>Yu-Gi-Oh Api</h1>
+        </div>
     </header>
 </template>
 

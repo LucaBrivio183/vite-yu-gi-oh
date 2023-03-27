@@ -1,11 +1,14 @@
 <script>
 import AppCardList from './AppCardList.vue';
 import AppFoundResults from './AppFoundResults.vue';
+import AppSearchType from './AppSearchType.vue';
+
 export default {
     name: 'Main',
     components: {
         AppCardList,
-        AppFoundResults
+        AppFoundResults,
+        AppSearchType
     }
 
 }
@@ -13,6 +16,9 @@ export default {
 
 <template>
     <main>
+        <div class="px-5 py-3">
+            <AppSearchType />
+        </div>
         <div class="container p-5">
             <AppFoundResults />
             <AppCardList />

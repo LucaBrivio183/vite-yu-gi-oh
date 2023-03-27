@@ -25,12 +25,18 @@ export default {
 <style lang="scss" scoped>
 @use '../../scss/_partials/variables' as *;
 
-h3 {
-    font-size: 1rem;
-    color: $secondary;
-}
+div {
+    text-overflow: ellipsis;
 
-span {
-    font-size: .75rem;
+    h3 {
+        max-width: 100%;
+        font-size: 1rem;
+        color: $secondary;
+    }
+
+    span {
+        font-size: .75rem;
+        max-width: 100%;
+    }
 }
 </style>

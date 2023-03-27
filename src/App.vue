@@ -4,9 +4,16 @@ import axios from 'axios';
 //function
 import { store } from './store';
 //components
+import AppHeader from './assets/components/header/AppHeader.vue';
+import AppMain from './assets/components/main/AppMain.vue';
+import AppFooter from './assets/components/footer/AppFooter.vue';
+
 export default {
   name: 'App',
   components: {
+    AppHeader,
+    AppMain,
+    AppFooter
   },
   data() {
     return {

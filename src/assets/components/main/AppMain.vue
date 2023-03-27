@@ -11,10 +11,19 @@ export default {
 
 <template>
     <main>
-        <AppCardList />
+        <div class="container p-5">
+            <AppCardList />
+        </div>
     </main>
 </template>
 
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '../../scss/_partials/variables' as *;
+
+.container {
+    background-color: $secondary;
+
+}
+</style>

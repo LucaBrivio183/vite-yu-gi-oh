@@ -22,4 +22,15 @@ export default {
 </template>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '../../scss/_partials/variables' as *;
+
+h3 {
+    font-size: 1rem;
+    color: $secondary;
+}
+
+span {
+    font-size: .75rem;
+}
+</style>

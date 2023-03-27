@@ -1,12 +1,17 @@
 <script>
+import AppCardList from './AppCardList.vue';
 export default {
-    name: 'Main'
+    name: 'Main',
+    components: {
+        AppCardList,
+    }
+
 }
 </script>
 
 <template>
     <main>
-
+        <AppCardList />
     </main>
 </template>
 

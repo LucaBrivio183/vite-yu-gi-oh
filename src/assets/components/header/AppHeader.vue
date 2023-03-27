@@ -19,4 +19,8 @@ export default {
 
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+header {
+    background-color: white;
+}
+</style>

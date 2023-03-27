@@ -4,3 +4,7 @@
 @use '_partials/mixins' as *;
 // Import all of Bootstrap's CSS
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+    background-color: $primary;
+}

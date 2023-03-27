@@ -2,3 +2,5 @@
 @use '_partials/variables' as *;
 @use '_partials/typography' as *;
 @use '_partials/mixins' as *;
+// Import all of Bootstrap's CSS
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";

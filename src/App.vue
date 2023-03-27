@@ -26,7 +26,11 @@ export default {
 }
 </script>
 
-<template></template>
+<template>
+  <AppHeader />
+  <AppMain />
+  <AppFooter />
+</template>
 
 <style lang="scss" scoped>
 @use './assets/scss/main.scss' as *;

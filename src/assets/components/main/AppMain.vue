@@ -17,7 +17,7 @@ export default {
 <template>
     <main>
         <div class="px-5 py-3">
-            <AppSearchType />
+            <AppSearchType @recallSearch="$emit('recallSearch')" />
         </div>
         <div class="container p-5">
             <AppFoundResults />

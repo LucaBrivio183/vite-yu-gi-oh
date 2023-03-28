@@ -20,6 +20,19 @@ export default {
       store
     }
   },
+  methods: {
+    search() {
+      axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php',
+        {
+          params: {
+            archetype: store.selectedArchetype
+          }
+        }).then((response) => {
+          this.store.cards = response.data.data;
+          this.store.cardsFound = response.data.data.length;
+        })
+    }
+  },
   created() {
     axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
       .then((response) => {
@@ -27,7 +40,6 @@ export default {
       })
     axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
       .then((response) => {
-        console.log(response.data);
         this.store.cardsArchetypes = response.data;
       })
   }
@@ -36,7 +48,7 @@ export default {
 
 <template>
   <AppHeader />
-  <AppMain />
+  <AppMain @recallSearch="search" />
   <AppFooter />
 </template>
 

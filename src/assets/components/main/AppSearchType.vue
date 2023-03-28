@@ -1,20 +1,30 @@
 <script>
+import { store } from '../../../store';
 export default {
-    name: 'SearchType'
+    name: 'SearchType',
+    data() {
+        return {
+            store
+        }
+    },
 }
 </script>
 
 <template>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown button
-        </button>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Alien</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
+    <div class="container">
+        <select class="form-select" aria-label="Default select example">
+            <option v-for="item in store.cardsArchetypes" :value="item.archetype_name">{{ item.archetype_name
+            }}</option>
+        </select>
     </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container {
+    background-color: transparent;
+
+    .form-select {
+        max-width: 18.75rem;
+    }
+}
+</style>

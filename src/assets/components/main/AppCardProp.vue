@@ -11,7 +11,7 @@ export default {
 
 
 <template>
-    <article class="text-center">
+    <article class="text-center h-100 d-flex flex-column justify-content-between">
         <div>
             <img :src="img" :alt="name" class="img-fluid">
         </div>
@@ -25,18 +25,24 @@ export default {
 <style lang="scss" scoped>
 @use '../../scss/_partials/variables' as *;
 
-div {
+article {
+    background-color: $primary;
     text-overflow: ellipsis;
 
-    h3 {
-        max-width: 100%;
-        font-size: 1rem;
-        color: $secondary;
-    }
+    div {
+        text-overflow: ellipsis;
 
-    span {
-        font-size: .75rem;
-        max-width: 100%;
+        h3 {
+            max-width: 100%;
+            font-size: 1rem;
+            color: $secondary;
+            text-overflow: ellipsis;
+        }
+
+        span {
+            font-size: .75rem;
+            max-width: 100%;
+        }
     }
 }
 </style>

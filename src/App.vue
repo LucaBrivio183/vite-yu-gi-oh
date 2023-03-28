@@ -37,6 +37,7 @@ export default {
     axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
       .then((response) => {
         this.store.cards = response.data.data;
+        this.store.cardsFound = response.data.data.length;
       })
     axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
       .then((response) => {

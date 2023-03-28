@@ -16,7 +16,7 @@ export default {
 
 <template>
     <main>
-        <div class="px-5 py-3">
+        <div class="px-5 py-3 container">
             <AppSearchType @recallSearch="$emit('recallSearch')" />
         </div>
         <div class="container p-5">
@@ -31,7 +31,11 @@ export default {
 <style lang="scss" scoped>
 @use '../../scss/_partials/variables' as *;
 
-.container {
+.px-5 {
+    background-color: transparent;
+}
+
+.container:last-child {
     background-color: $secondary;
 
 }
